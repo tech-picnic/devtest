@@ -65,7 +65,7 @@ jobs:
         with:
           cluster_name: frodo
           location: 	asia-northeast3-a
-          project_id: sunlit-runway-366823
+          project_id: My First Project
           credentials: ${{ secrets.GCP_SA_KEY }}
       - name: was-deploy restart
         run: kubectl set image deploy was was=${{ secrets.DOCKERHUB_USERNAME }}/m-dev:tomcat_${{ env.RELEASE_VERSION }}
