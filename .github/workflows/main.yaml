@@ -68,4 +68,4 @@ jobs:
           project_id: tokyo-charge-327305
           credentials: ${{ secrets.GCP_SA_KEY }}
       - name: was-deploy restart
-        run: kubectl set image deploy was was=${{ secrets.DOCKERHUB_USERNAME }}/m-dev:tomcat_${{ env.RELEASE_VERSION }}
+        run: kubectl set image deploy was was=${{ secrets.DOCKERHUB_USERNAME }}/was:v${{ env.RELEASE_VERSION }}
